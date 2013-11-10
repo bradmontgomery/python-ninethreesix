@@ -23,11 +23,13 @@ class Password(object):
         self.num_words = num_words
         self.min_len = min_len
         self.max_len = max_len
+        self.content = self._words()
 
+    def _words(self):
         parent_dir = os.path.dirname(os.path.abspath(__file__))
         word_list = os.path.join(parent_dir, "word_list.txt")
         content = open(word_list).read()
-        self.content = sub("\s", " ", content)
+        return sub("\s", " ", content)
 
     def password(self):
         pattern = r"\b\w{{{0},{1}}}\b".format(self.min_len, self.max_len)

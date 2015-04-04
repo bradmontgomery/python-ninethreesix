@@ -1,6 +1,8 @@
 ninethreesix
 ============
 
+|version| |license|
+
 a password generator
 
 
@@ -48,3 +50,11 @@ The bundled word file is COMMON.TXT, which is:
 
 For the original sources, see:
 [http://www.gutenberg.org/ebooks/3201](http://www.gutenberg.org/ebooks/3201)
+
+.. |version| image:: http://img.shields.io/pypi/v/python-ninethreesix.svg?style=flat-square
+    :alt: Current Release
+    :target: https://pypi.python.org/pypi/python-ninethreesix/
+
+.. |license| image:: http://img.shields.io/pypi/l/python-ninethreesix.svg?style=flat-square
+    :alt: License
+    :target: https://pypi.python.org/pypi/python-ninethreesix/

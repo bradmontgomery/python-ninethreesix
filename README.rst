@@ -49,7 +49,7 @@ The bundled word file is COMMON.TXT, which is:
     beginning pool of relatively common words.
 
 For the original sources, see:
-[http://www.gutenberg.org/ebooks/3201](http://www.gutenberg.org/ebooks/3201)
+`http://www.gutenberg.org/ebooks/3201 <(http://www.gutenberg.org/ebooks/3201>`_
 
 .. |version| image:: http://img.shields.io/pypi/v/python-ninethreesix.svg?style=flat-square
     :alt: Current Release

@@ -10,15 +10,15 @@ usage
 From python::
 
     >>> from ninethreesix import Password
-    >>> p = Password(num_words=4, min_len=3, max_len=8)
+    >>> p = Password(num_words=3, min_len=3, max_len=6)
     >>> p.as_string()
-    'samovar-plug-pyruline-succube'
+    'whelp-word-out'
 
 Or run the module directly::
 
     $ python -m ninethreesix.password
 
-    yalb-wifock-grudging-unvali
+    show-sine-Troy
 
 
 what's with the name?
@@ -31,3 +31,20 @@ license
 -------
 
 The code here is available under the MIT license.
+
+
+word list
+---------
+
+The bundled word list comes from the Moby Word list by Grady Ward, which is
+listed in the public domain.
+
+The bundled word file is COMMON.TXT, which is:
+
+    74,550 common dictionary words (common.txt)
+    A list of words in common with two or more published dictionaries.
+    This gives the developer of a custom spelling checker a good
+    beginning pool of relatively common words.
+
+For the original sources, see:
+[http://www.gutenberg.org/ebooks/3201](http://www.gutenberg.org/ebooks/3201)

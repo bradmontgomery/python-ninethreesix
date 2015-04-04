@@ -1,5 +1,5 @@
 from nose.tools import eq_
-from password import Password
+from .password import Password
 
 
 def test_init():
@@ -9,7 +9,6 @@ def test_init():
     eq_(p.num_words, 3)
     eq_(p.min_len, 3)
     eq_(p.max_len, 6)
-    eq_(len(p.content), 805232)  # should be a string of this length
     eq_(p.content.find("\n"), -1)  # should contain no newlines
 
 

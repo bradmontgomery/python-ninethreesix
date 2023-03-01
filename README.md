@@ -5,7 +5,18 @@
 **a password generator**
 
 
+## installation
+
+    pip install python-ninethreesix
+
 ## usage
+
+It comes with a script!
+
+    $ ninethreesix --help
+    $ ninethreesix
+    
+    wrench-fair-fascia
 
 From python::
 

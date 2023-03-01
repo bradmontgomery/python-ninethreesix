@@ -1,8 +1,8 @@
 # ninethreesix
 
-[![version](http://img.shields.io/pypi/v/python-ninethreesix.svg?style=flat-square)](https://pypi.python.org/pypi/python-ninethreesix/) [![license](http://img.shields.io/pypi/l/python-ninethreesix.svg?style=flat-square)](https://pypi.python.org/pypi/python-ninethreesix/)
+[![version](http://img.shields.io/pypi/v/python-ninethreesix.svg?style=flat-square)](https://pypi.python.org/pypi/python-ninethreesix/) [![license](http://img.shields.io/pypi/l/python-ninethreesix.svg?style=flat-square)](https://pypi.python.org/pypi/python-ninethreesix/) [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg?style=flat-square)](https://www.python.org/) [![PyPI download month](https://img.shields.io/pypi/dm/python-ninethreesix.svg?style=flat-square)](https://pypi.org/project/python-ninethreesix/)
 
-a password generator
+**a password generator**
 
 
 ## usage

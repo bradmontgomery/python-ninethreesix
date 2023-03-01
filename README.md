@@ -1,13 +1,11 @@
-ninethreesix
-============
+# ninethreesix
 
-|version| |license|
+[[!version](http://img.shields.io/pypi/v/python-ninethreesix.svg?style=flat-square](https://pypi.python.org/pypi/python-ninethreesix/) [[!license](http://img.shields.io/pypi/l/python-ninethreesix.svg?style=flat-square)](https://pypi.python.org/pypi/python-ninethreesix/)
 
 a password generator
 
 
-usage
------
+## usage
 
 From python::
 
@@ -22,21 +20,17 @@ Or run the module directly::
 
     show-sine-Troy
 
+## what's with the name?
 
-what's with the name?
----------------------
-
-See: `http://xckd.com/936/ <http://xckd.com/936/>`_
+See: [http://xckd.com/936/](http://xckd.com/936/)
 
 
-license
--------
+## license
 
 The code here is available under the MIT license.
 
 
-word list
----------
+## word list
 
 The bundled word list comes from the Moby Word list by Grady Ward, which is
 listed in the public domain.
@@ -49,12 +43,4 @@ The bundled word file is COMMON.TXT, which is:
     beginning pool of relatively common words.
 
 For the original sources, see:
-`http://www.gutenberg.org/ebooks/3201 <(http://www.gutenberg.org/ebooks/3201>`_
-
-.. |version| image:: http://img.shields.io/pypi/v/python-ninethreesix.svg?style=flat-square
-    :alt: Current Release
-    :target: https://pypi.python.org/pypi/python-ninethreesix/
-
-.. |license| image:: http://img.shields.io/pypi/l/python-ninethreesix.svg?style=flat-square
-    :alt: License
-    :target: https://pypi.python.org/pypi/python-ninethreesix/
+[http://www.gutenberg.org/ebooks/3201](http://www.gutenberg.org/ebooks/3201).

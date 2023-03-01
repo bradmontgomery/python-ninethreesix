@@ -10,4 +10,6 @@ build:
 requirements:
 	pip install --upgrade pip
 	pip install --upgrade pip-tools
+	pip install --upgrade setuptools
+	pip install --upgrade build
 	pip-compile -rU --no-emit-index-url requirements.in

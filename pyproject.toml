@@ -29,6 +29,10 @@ classifiers = [
 dependencies = []
 dynamic = ["version", "readme"]
 
+[project.urls]
+"Homepage" = "https://github.com/bradmontgomery/python-ninethreesix"
+"Bug Tracker" = "https://github.com/bradmontgomery/python-ninethreesix/issues"
+
 [tool.setuptools.dynamic]
 version = {attr = "ninethreesix.VERSION"}
 readme = {file = ["README.md"]}

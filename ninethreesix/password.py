@@ -55,7 +55,7 @@ def unreadable_password(length=20):
     return "".join(sample(string.ascii_letters, length))
 
 
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser(description="Options for Password")
     parser.add_argument(
         "-n",
@@ -90,4 +90,9 @@ if __name__ == "__main__":
         print(unreadable_password())
     else:
         p = Password(num_words=args.num, min_len=args.min, max_len=args.max)
-        print("\n{0}\n".format(p.as_string()))
+        _password = p.as_string()
+        print(f"\n{_password}\n")
+
+
+if __name__ == "__main__":
+    main()

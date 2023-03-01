@@ -27,7 +27,7 @@ classifiers = [
     'Topic :: Utilities',
 ]
 dependencies = []
-dynamic = ["version", "readme"]
+dynamic = ["version"]
 
 [project.urls]
 "Homepage" = "https://github.com/bradmontgomery/python-ninethreesix"
@@ -35,7 +35,6 @@ dynamic = ["version", "readme"]
 
 [tool.setuptools.dynamic]
 version = {attr = "ninethreesix.VERSION"}
-readme = {file = ["README.md"]}
 
 [project.scripts]
 my-script = "ninethreesix.password"

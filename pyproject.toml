@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-ninethreesix"
+authors = [
+    {name = "Brad Montgomery", email = "brad@bradmontgomery.nte"},
+]
+description = "A password generator based on xkcd.com/936"
+readme = "README.md"
+requires-python = ">=3.7"
+keywords = ["password", "utility"]
+license = {text = "MIT"}
+classifiers = [
+    'Development Status :: 4 - Beta',
+    'Intended Audience :: Developers',
+    'Intended Audience :: Information Technology',
+    'Intended Audience :: System Administrators',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.11',
+    'Topic :: Security',
+    'Topic :: Software Development :: Libraries :: Python Modules',
+    'Topic :: Utilities',
+]
+dependencies = []
+dynamic = ["version"]
+
+[project.scripts]
+my-script = "ninethreesix.password"

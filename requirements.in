@@ -1,0 +1,6 @@
+black
+coverage
+ipython
+isort
+pip-tools
+pytest

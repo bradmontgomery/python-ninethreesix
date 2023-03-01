@@ -44,3 +44,11 @@ The bundled word file is COMMON.TXT, which is:
 
 For the original sources, see:
 [http://www.gutenberg.org/ebooks/3201](http://www.gutenberg.org/ebooks/3201).
+
+
+## Development
+
+If you want to work on this library, see the development requirements in `requirements.in` 
+and install them with `pip install -r requirements.txt`.  The latter is managed by `pip-tools` and can be updated by running `pip-compile`.
+
+Bug  fixes and new features can be proposed by opening a Pull Request for this repo.

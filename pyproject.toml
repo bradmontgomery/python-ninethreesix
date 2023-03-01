@@ -27,7 +27,11 @@ classifiers = [
     'Topic :: Utilities',
 ]
 dependencies = []
-dynamic = ["version"]
+dynamic = ["version", "readme"]
+
+[tool.setuptools.dynamic]
+version = {attr = "ninethreesix.VERSION"}
+readme = {file = ["README.md"]}
 
 [project.scripts]
 my-script = "ninethreesix.password"

@@ -1,7 +1,9 @@
 black
+build
 coverage
 ipython
 isort
 pip-tools
 pytest
 pytest-cov
+setuptools

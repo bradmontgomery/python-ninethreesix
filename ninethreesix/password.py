@@ -1,8 +1,8 @@
 import argparse
 import os
-
+import string
 from random import sample
-from re import sub, findall
+from re import findall, sub
 
 
 class Password(object):
@@ -46,19 +46,48 @@ class Password(object):
         words = findall(pattern, self.content)
         return sample(words, self.num_words)
 
-    def as_string(self, delimiter='-'):
+    def as_string(self, delimiter="-"):
         return delimiter.join(self.password())
 
 
+def unreadable_password(length=20):
+    """A function to generate an unreadable password. Just because."""
+    return "".join(sample(string.ascii_letters, length))
+
+
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Options for Password')
-    parser.add_argument('-n', '--num', type=int, default=3,
-                        help="Number of words to use in your password")
-    parser.add_argument('-m', '--min', type=int, default=3,
-                        help="Minimum lenth of each word (default is 3)")
-    parser.add_argument('-x', '--max', type=int, default=6,
-                        help="Maximum lenth of each word (default is 6)")
+    parser = argparse.ArgumentParser(description="Options for Password")
+    parser.add_argument(
+        "-n",
+        "--num",
+        type=int,
+        default=3,
+        help="Number of words to use in your password",
+    )
+    parser.add_argument(
+        "-m",
+        "--min",
+        type=int,
+        default=3,
+        help="Minimum lenth of each word (default is 3)",
+    )
+    parser.add_argument(
+        "-x",
+        "--max",
+        type=int,
+        default=6,
+        help="Maximum lenth of each word (default is 6)",
+    )
+    parser.add_argument(
+        "-u",
+        "--unreadable",
+        action="store_true",
+        help="Specify this to produce an unreadable password instead.",
+    )
     args = parser.parse_args()
 
-    p = Password(num_words=args.num, min_len=args.min, max_len=args.max)
-    print("\n{0}\n".format(p.as_string()))
+    if args.unreadable:
+        print(unreadable_password())
+    else:
+        p = Password(num_words=args.num, min_len=args.min, max_len=args.max)
+        print("\n{0}\n".format(p.as_string()))

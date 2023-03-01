@@ -52,3 +52,7 @@ If you want to work on this library, see the development requirements in `requir
 and install them with `pip install -r requirements.txt`.  The latter is managed by `pip-tools` and can be updated by running `pip-compile`.
 
 Bug  fixes and new features can be proposed by opening a Pull Request for this repo.
+
+### Tests
+
+Run the test suite with `pytest --cov`

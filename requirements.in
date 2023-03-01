@@ -4,3 +4,4 @@ ipython
 isort
 pip-tools
 pytest
+pytest-cov

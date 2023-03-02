@@ -37,4 +37,4 @@ dynamic = ["version"]
 version = {attr = "ninethreesix.VERSION"}
 
 [project.scripts]
-my-script = "ninethreesix.password"
+ninethreesix = "ninethreesix.password:main"

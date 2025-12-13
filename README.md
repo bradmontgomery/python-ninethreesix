@@ -18,6 +18,10 @@ It comes with a script!
     
     wrench-fair-fascia
 
+Or run with uvx:
+
+    $ uvx --from python-ninethreesix ninethreesix
+
 From python::
 
     >>> from ninethreesix import Password

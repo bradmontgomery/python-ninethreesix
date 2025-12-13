@@ -26,7 +26,10 @@ classifiers = [
     'Topic :: Software Development :: Libraries :: Python Modules',
     'Topic :: Utilities',
 ]
-dependencies = []
+dependencies = [
+    "rich>=13.8.1",
+    "rich-click>=1.8.9",
+]
 dynamic = ["version"]
 
 [project.urls]

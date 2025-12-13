@@ -1,8 +1,10 @@
-import argparse
 import os
 import string
 from random import sample
 from re import findall, sub
+
+import rich_click as click
+from rich.console import Console
 
 
 class Password(object):
@@ -55,43 +57,41 @@ def unreadable_password(length=20):
     return "".join(sample(string.ascii_letters, length))
 
 
-def main():
-    parser = argparse.ArgumentParser(description="Options for Password")
-    parser.add_argument(
-        "-n",
-        "--num",
-        type=int,
-        default=3,
-        help="Number of words to use in your password",
-    )
-    parser.add_argument(
-        "-m",
-        "--min",
-        type=int,
-        default=3,
-        help="Minimum lenth of each word (default is 3)",
-    )
-    parser.add_argument(
-        "-x",
-        "--max",
-        type=int,
-        default=6,
-        help="Maximum lenth of each word (default is 6)",
-    )
-    parser.add_argument(
-        "-u",
-        "--unreadable",
-        action="store_true",
-        help="Specify this to produce an unreadable password instead.",
-    )
-    args = parser.parse_args()
-
-    if args.unreadable:
-        print(unreadable_password())
+@click.command()
+@click.option(
+    "-n",
+    "--num",
+    default=3,
+    help="Number of words to use in your password",
+)
+@click.option(
+    "-m",
+    "--min",
+    "min_len",
+    default=3,
+    help="Minimum lenth of each word (default is 3)",
+)
+@click.option(
+    "-x",
+    "--max",
+    "max_len",
+    default=6,
+    help="Maximum lenth of each word (default is 6)",
+)
+@click.option(
+    "-u",
+    "--unreadable",
+    is_flag=True,
+    help="Specify this to produce an unreadable password instead.",
+)
+def main(num, min_len, max_len, unreadable):
+    console = Console()
+    if unreadable:
+        console.print(unreadable_password())
     else:
-        p = Password(num_words=args.num, min_len=args.min, max_len=args.max)
+        p = Password(num_words=num, min_len=min_len, max_len=max_len)
         _password = p.as_string()
-        print(f"\n{_password}\n")
+        console.print(f"\n{_password}\n")
 
 
 if __name__ == "__main__":

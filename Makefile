@@ -4,19 +4,15 @@ all:
 
 .PHONY: build
 build:
-	python -m build
+	uv build
 
-.PHONY: requirements
-requirements:
-	pip install --upgrade pip
-	pip install --upgrade pip-tools
-	pip install --upgrade setuptools
-	pip install --upgrade build
-	pip-compile -rU --no-emit-index-url requirements.in
+.PHONY: install
+install:
+	uv sync
 
 .PHONY: upload
 upload:
-	twine upload dist/*
+	uv run twine upload dist/*
 
 .PHONY: clean
 clean:

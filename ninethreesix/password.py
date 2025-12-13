@@ -69,14 +69,14 @@ def unreadable_password(length=20):
     "--min",
     "min_len",
     default=3,
-    help="Minimum lenth of each word (default is 3)",
+    help="Minimum length of each word (default is 3)",
 )
 @click.option(
     "-x",
     "--max",
     "max_len",
     default=6,
-    help="Maximum lenth of each word (default is 6)",
+    help="Maximum length of each word (default is 6)",
 )
 @click.option(
     "-u",

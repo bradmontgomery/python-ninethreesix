@@ -59,11 +59,12 @@ For the original sources, see:
 
 ## Development
 
-If you want to work on this library, see the development requirements in `requirements.in` 
-and install them with `pip install -r requirements.txt`.  The latter is managed by `pip-tools` and can be updated by running `pip-compile`.
+If you want to work on this library, you can install the development requirements with `uv sync` (or `make install`).
+
+This project supports Python 3.12, 3.13, and 3.14 (preferred).
 
 Bug  fixes and new features can be proposed by opening a Pull Request for this repo.
 
 ### Tests
 
-Run the test suite with `pytest --cov`
+Run the test suite with `uv run pytest --cov`

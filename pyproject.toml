@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools", "rich", "rich-click"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -9,7 +9,7 @@ authors = [
 ]
 description = "A password generator based on xkcd.com/936"
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.12"
 keywords = ["password", "utility"]
 license = {text = "MIT"}
 classifiers = [
@@ -21,12 +21,17 @@ classifiers = [
     'Operating System :: OS Independent',
     'Programming Language :: Python',
     'Programming Language :: Python :: 3',
-    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'Programming Language :: Python :: 3.13',
+    'Programming Language :: Python :: 3.14',
     'Topic :: Security',
     'Topic :: Software Development :: Libraries :: Python Modules',
     'Topic :: Utilities',
 ]
-dependencies = []
+dependencies = [
+    "rich>=13.8.1",
+    "rich-click>=1.8.9",
+]
 dynamic = ["version"]
 
 [project.urls]
@@ -35,6 +40,19 @@ dynamic = ["version"]
 
 [tool.setuptools.dynamic]
 version = {attr = "ninethreesix.VERSION"}
+
+[dependency-groups]
+dev = [
+    "black>=23.3.0",
+    "build>=1.1.1",
+    "coverage>=7.2.7",
+    "ipython>=7.34.0",
+    "isort>=5.11.5",
+    "pytest>=7.4.4",
+    "pytest-cov>=4.1.0",
+    "setuptools>=68.0.0",
+    "twine>=4.0.2",
+]
 
 [project.scripts]
 ninethreesix = "ninethreesix.password:main"

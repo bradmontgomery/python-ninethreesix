@@ -1,4 +1,5 @@
 import unittest
+import string
 
 from .password import Password, unreadable_password
 
@@ -42,7 +43,6 @@ class UnreadablePasswordTestCase(unittest.TestCase):
 
         # Check for special characters (probabilistic but likely)
         pwd = unreadable_password(length=100)
-        import string
         has_special = any(c in string.punctuation for c in pwd)
         has_digit = any(c in string.digits for c in pwd)
         self.assertTrue(has_special or has_digit, "Should contain special chars or digits")

@@ -47,7 +47,7 @@ class Password(object):
     def password(self):
         pattern = r"\b\w{{{0},{1}}}\b".format(self.min_len, self.max_len)
         words = findall(pattern, self.content)
-        return [secrets.choice(words) for _ in range(self.num_words)]
+        return secrets.SystemRandom().sample(words, self.num_words)
 
     def as_string(self, delimiter="-"):
         return delimiter.join(self.password())

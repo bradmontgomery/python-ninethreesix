@@ -34,5 +34,15 @@ class UnreadablePasswordTestCase(unittest.TestCase):
         # Test custom length
         self.assertEqual(len(unreadable_password(length=50)), 50)
 
+        # Test long password (previously failed with sample)
+        self.assertEqual(len(unreadable_password(length=100)), 100)
+
         # Assert data type
         self.assertEqual(type(unreadable_password()), str)
+
+        # Check for special characters (probabilistic but likely)
+        pwd = unreadable_password(length=100)
+        import string
+        has_special = any(c in string.punctuation for c in pwd)
+        has_digit = any(c in string.digits for c in pwd)
+        self.assertTrue(has_special or has_digit, "Should contain special chars or digits")

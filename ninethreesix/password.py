@@ -1,6 +1,6 @@
 import os
+import secrets
 import string
-from random import sample
 from re import findall, sub
 
 import rich_click as click
@@ -40,13 +40,14 @@ class Password(object):
     def _words(self):
         parent_dir = os.path.dirname(os.path.abspath(__file__))
         word_list = os.path.join(parent_dir, "COMMON.TXT")
-        content = open(word_list).read()
-        return sub("\s", " ", content)
+        with open(word_list, encoding="utf-8") as f:
+            content = f.read()
+        return sub(r"\s", " ", content)
 
     def password(self):
         pattern = r"\b\w{{{0},{1}}}\b".format(self.min_len, self.max_len)
         words = findall(pattern, self.content)
-        return sample(words, self.num_words)
+        return [secrets.choice(words) for _ in range(self.num_words)]
 
     def as_string(self, delimiter="-"):
         return delimiter.join(self.password())
@@ -54,7 +55,8 @@ class Password(object):
 
 def unreadable_password(length=20):
     """A function to generate an unreadable password. Just because."""
-    return "".join(sample(string.ascii_letters, length))
+    chars = string.ascii_letters + string.digits + string.punctuation
+    return "".join(secrets.choice(chars) for _ in range(length))
 
 
 @click.command()

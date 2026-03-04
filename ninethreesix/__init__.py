@@ -1,4 +1,4 @@
-__version__ = "0.3.0"
+__version__ = "0.4.0"
 VERSION = __version__
 
 from .password import Password, unreadable_password
